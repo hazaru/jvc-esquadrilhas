@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JVC | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <link rel="stylesheet" href="assets/css/glide.core.min.css">
+    <link rel="stylesheet" href="assets/css/glide.core.min.css">
+
+</head>
+<body>
+<header class="cabecalho">
+    <button class="cabecalho__menu" aria-label="Menu"><i></i></button>
+    <p class="cabecalho__perfil">WhatsApp</p>
+    <img src="assets/img/whatsapp.png" alt="Fale conosco através do WhatsApp" class="cabecalho__logo">
+    <button class="cabecalho__notificacao" aria-label="WhatsApp"><i></i></button>
+</header>
+
+<nav class="menu-lateral">
+    <img src="assets/img/logo.png" alt="Logotipo da JVC" class="menu-lateral__logo">
+    <a href="#"
+       class="menu-lateral__link menu-lateral__link&#45;&#45;inicio menu-lateral__link&#45;&#45;ativo">Início</a>
+    <a href="localizacao.html" class="menu-lateral__link menu-lateral__link&#45;&#45;videos">Localização</a>
+    <a href="imagens.html" class="menu-lateral__link menu-lateral__link&#45;&#45;picos">Localização</a>
+    <a href="#" class="menu-lateral__link menu-lateral__link&#45;&#45;contatos">Contatos</a>
+    <a href="#" class="menu-lateral__link menu-lateral__link&#45;&#45;quem-somos">Quem Somos</a>
+</nav>
+
+<main class="glide">
+    <div class="glide">
+        <h2 class="titulo-pagina">Mapa do MVC</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.300830050179!2d-46.62425402381404!3d-23.66519756541687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce44ce2d5e5be9%3A0xe4eac1302828536b!2sR.%20Gaivota%2C%2049%20-%20Campan%C3%A1rio%2C%20Diadema%20-%20SP%2C%2009931-410!5e0!3m2!1sen!2sbr!4v1670550001974!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <!--<div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow&#45;&#45;left" data-glide-dir="<">Anterior</button>
+                <button class="glide__arrow glide__arrow&#45;&#45;right" data-glide-dir=">">Próxima</button>
+            </div>-->
+
+</main>
+<script src="index.js"></script>
+<script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+<script>
+
+    var glide = new Glide('.glide', {
+        type: 'carousel',
+        perView: 1,
+        startAt: 0,
+        focusAt: 'center',
+        breakpoints: {
+            800: {
+                perView: 2
+            },
+            480: {
+                perView: 1
+            }
+        }
+    })
+
+    glide.mount()
+
+</script>
+
+
+</body>
+</html>
